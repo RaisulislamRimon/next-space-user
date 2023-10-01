@@ -56,15 +56,21 @@ export default function NavMenu() {
           <div className="navbar-center">
             <ul className="menu menu-horizontal px-1">
               <li className="hover:underline">
-                <Link href={'/about'}>About</Link>
+                <Link
+                  href={'/about'}
+                  className="hover:text-white hover:bg-transparent"
+                >
+                  About
+                </Link>
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary>Read</summary>
+                  <summary className="hover:text-white hover:bg-transparent">
+                    Read
+                  </summary>
                   <ul className="p-2">
                     <li className="hover:underline">
                       <Link href={'/blog'}>Blog</Link>
-                      <a></a>
                     </li>
                     <li className="hover:underline">
                       <Link href={'/videos'}>Videos</Link>
@@ -73,7 +79,12 @@ export default function NavMenu() {
                 </details>
               </li>
               <li className="hover:underline">
-                <Link href={'/users'}>Users</Link>
+                <Link
+                  href={'/users'}
+                  className="hover:text-white hover:bg-transparent"
+                >
+                  Users
+                </Link>
               </li>
             </ul>
           </div>
