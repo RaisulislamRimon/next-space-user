@@ -1,3 +1,5 @@
+export const revalidate = 420;
+
 interface Post {
   title: string;
   slug: string;
@@ -9,12 +11,19 @@ interface Props {
   params: { slug: string };
 }
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Blog Post",
   description: "This is a blog post",
 };
+
+export async function generateStaticParams() {
+  const posts: Post[] = await fetch("http://localhost:3000/api/content").then(
+    (response) => response.json()
+  );
+  return posts.map((post) => {
+    slug: post.slug;
+  });
+}
 
 export default async function BlogPostPage({ params }: Props) {
   // const posts: Post[] = await fetch(
