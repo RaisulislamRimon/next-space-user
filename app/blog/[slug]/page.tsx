@@ -9,15 +9,22 @@ interface Props {
   params: { slug: string };
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog Post",
+  description: "This is a blog post",
+};
+
 export default async function BlogPostPage({ params }: Props) {
   // const posts: Post[] = await fetch(
   // fetch content from api
   const posts: Post[] = await fetch(
-    "https://solid-space-spoon-5x6rp5g5xg4267-3000.app.github.dev/api/content"
+    // "https://solid-space-spoon-5x6rp5g5xg4267-3000.app.github.dev/api/content"
     // "/api/content"
-  )
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+    "http://localhost:3000/api/content"
+    // "http://127.0.0.1:3000/api/content"
+  ).then((response) => response.json());
   const post = posts.find((post) => post.slug === params.slug)!;
   return (
     <div>
