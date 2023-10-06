@@ -1,10 +1,8 @@
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'About us',
-  description: 'We are a social media company',
+export const metadata = {
+  title: "About us",
+  description: "We are a social media company",
 };
 
 export default function About() {

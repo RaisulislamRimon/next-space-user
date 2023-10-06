@@ -12,7 +12,7 @@ export function SignInButton() {
     // return <>Loading...</>;
     return (
       <>
-        <button className="btn btn-square">
+        <button className="">
           <span className="loading loading-spinner"></span>
         </button>
       </>
