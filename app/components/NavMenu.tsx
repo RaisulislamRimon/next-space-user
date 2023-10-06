@@ -92,36 +92,6 @@ export default function NavMenu() {
 
           <SignInButton />
           {/* <SignOuButton /> */}
-
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <Image
-                  src="https://i.ibb.co/drs3Dsc/Tt-GMr7-CQsgp-B673-XRRUUG.png"
-                  width={216}
-                  height={30}
-                  alt="next-space-user logo"
-                />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between text-black">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a className="text-black">Settings</a>
-              </li>
-              {/* <li>
-                <a className="text-black">Logout</a>
-              </li> */}
-            </ul>
-          </div>
         </div>
       </div>
     </nav>
