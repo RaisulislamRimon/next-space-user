@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { SignInButton, SignOuButton } from "./buttons";
 
 export default function NavMenu() {
   return (
@@ -7,7 +8,7 @@ export default function NavMenu() {
       <div className="navbar bg-blue-700 text-white">
         <div className="flex-1">
           {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
-          <Link href={'/'}>
+          <Link href={"/"}>
             <Image
               src="https://i.ibb.co/drs3Dsc/Tt-GMr7-CQsgp-B673-XRRUUG.png"
               width={50}
@@ -57,7 +58,7 @@ export default function NavMenu() {
             <ul className="menu menu-horizontal px-1">
               <li className="hover:underline">
                 <Link
-                  href={'/about'}
+                  href={"/about"}
                   className="hover:text-white hover:bg-transparent"
                 >
                   About
@@ -70,17 +71,17 @@ export default function NavMenu() {
                   </summary>
                   <ul className="p-2">
                     <li className="hover:underline">
-                      <Link href={'/blog'}>Blog</Link>
+                      <Link href={"/blog"}>Blog</Link>
                     </li>
                     <li className="hover:underline">
-                      <Link href={'/videos'}>Videos</Link>
+                      <Link href={"/videos"}>Videos</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li className="hover:underline">
                 <Link
-                  href={'/users'}
+                  href={"/users"}
                   className="hover:text-white hover:bg-transparent"
                 >
                   Users
@@ -88,6 +89,10 @@ export default function NavMenu() {
               </li>
             </ul>
           </div>
+
+          <SignInButton />
+          {/* <SignOuButton /> */}
+
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -104,17 +109,17 @@ export default function NavMenu() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
+                <a className="justify-between text-black">
                   Profile
                   <span className="badge">New</span>
                 </a>
               </li>
               <li>
-                <a>Settings</a>
+                <a className="text-black">Settings</a>
               </li>
-              <li>
-                <a>Logout</a>
-              </li>
+              {/* <li>
+                <a className="text-black">Logout</a>
+              </li> */}
             </ul>
           </div>
         </div>
